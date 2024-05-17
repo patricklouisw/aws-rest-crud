@@ -46,6 +46,13 @@ x-api-key = <insert API KEY>
 Lambda Authorizer is a lambda function which checks the authenticity of the request.
 
 API Gateway will always call the lambda authorizer before triggering the intended lambda function.
+1. Authorizer gets the context + token of request params
+2. Run lambda function
+    - Check validity and expiration of tokens such as id token, access token and refresh token. OR
+    - Get info from db for any relevant info to be passed down stream
+    - etc
+3. Return IAM principal + policy back to API gateway to allow/disallow accessed to the different endpoints
+    - This policies are usually cached, so we don't need to call almbda authorizer too many times
 
 **Set Up:**
 1. s
@@ -54,4 +61,5 @@ API Gateway will always call the lambda authorizer before triggering the intende
 #### How to call on postman
 
 ##### Practical Use case
-- Check validity of ID token or access token
+- Check validity and expiration of tokens such as id token, access token and refresh token.
+
