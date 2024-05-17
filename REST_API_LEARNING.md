@@ -2,7 +2,7 @@
 - [Serverless Framework Docs](https://www.serverless.com/framework/docs)
 - [Serverless Sample SetUp](https://github.com/serverless/examples)
 - [AWS SDK javascript doc](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html)
-- (AWS DynamoDB yaml)[https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-keyschema.html]
+- [AWS DynamoDB yaml](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-keyschema.html)
 
 ## LEARNING
 1. Serverless framework vs SAM vs CDK
@@ -28,7 +28,7 @@ Lambda is billed by execution time, anything to reduce execution time will make 
 
       Instead of making this connection every time we want to do something, we can use `HTTP alive` to reuse the connections that are previously opened, which reduces latency.
 
-      (Reference)[https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/node-reusing-connections.html]
+      [Reference](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/node-reusing-connections.html)
 
     - **Dynamodb timeout problem**
 
