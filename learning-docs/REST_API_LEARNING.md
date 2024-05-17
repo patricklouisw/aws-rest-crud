@@ -11,7 +11,15 @@
 
   What's nice is as long as we deploy serverless framework to cloud formation, we can always migrate the infrastructure code from serverless to SAM / CDK via cloud formations IaC Generator: [Reference](https://www.youtube.com/watch?v=zyT4y-rfu7s&list=PLnSOIGN9eVemdR84zM_DbvGsm9LzC-55J)
 
-2. Optimizations
+2. HTTP API vs REST API (API Gateway)
+
+    REST APIs support more features than HTTP APIs, while HTTP APIs are designed with minimal features so that they can be offered at a lower price.
+
+    References: 
+    - [AWS LINK](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html)
+    - [Serverless Docs on HTTP API vs REST API](https://www.serverless.com/framework/docs-providers-aws-events-http-api)
+
+3. Optimizations
 Lambda is billed by execution time, anything to reduce execution time will make it cheaper to run lambda functions:
   - Node.js
     - **callbackWaitsForEmptyEventLoop**

@@ -21,7 +21,7 @@ functions:
           - dynamodb:PutItem
         Resource: !GetAtt notesTable.Arn
     events:
-      - httpApi:
+      - http:
           path: /notes
           method: post
   updateNote:
@@ -35,7 +35,7 @@ functions:
           - dynamodb:UpdateItem
         Resource: !GetAtt notesTable.Arn
     events:
-      - httpApi:
+      - http:
           path: /notes/{id}
           method: put
   deleteNote:
@@ -49,7 +49,7 @@ functions:
           - dynamodb:DeleteItem
         Resource: !GetAtt notesTable.Arn
     events:
-      - httpApi:
+      - http:
           path: /notes/{id}
           method: delete
   getAllNotes:
@@ -63,7 +63,7 @@ functions:
           - dynamodb:Scan
         Resource: !GetAtt notesTable.Arn
     events:
-      - httpApi:
+      - http:
           path: /notes
           method: get
 
